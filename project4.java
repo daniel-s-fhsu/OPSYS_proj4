@@ -31,6 +31,8 @@ class project4 {
             System.out.print("Do you want to have another test? ");
             choice = input.nextLine().toUpperCase().charAt(0);
         } while (choice == 'Y');
+
+        input.close();
     }
 
     public static int isInArray(int[] frames, int page) {
@@ -85,7 +87,7 @@ class project4 {
 
     public static int LRUReplacement(ArrayList<Integer> rs, int numOfFrames) {
         int[] frames = new int[numOfFrames];
-        int i, j, first = 0, count =0;
+        int i, j, count =0;
         
         for (i=0; i < numOfFrames; i++) frames[i] = -1;
         for (i=0; i < rs.size(); i++) {
